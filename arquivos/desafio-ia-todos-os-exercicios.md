@@ -64,7 +64,7 @@ Está pronto quando [quem lê] consegue decidir o que fazer lendo só esta pági
 
 ### Confira
 **O que deve voltar:**
-- **A conversa A volta boa e longa:** decide sozinha o número estranho e não diz o que fazer. É isso o raso: não serve para quem decide.
+- **A conversa A volta boa e longa,** mas resolve sozinha o número que não fecha e não diz o que fazer. É isso o raso: não serve para quem decide.
 - A conversa B começa pelo que mudou e pelo que precisa de decisão.
 - Em B, nenhuma causa aparece como fato se ela não está nos números.
 - Se havia número estranho, B perguntou em vez de usar.
@@ -125,7 +125,7 @@ Leia a resposta e ache o defeito na tabela. Cole **só a frase daquele defeito**
 - O defeito que você apontou sumiu.
 - O que já estava certo continua lá.
 
-**Se o defeito não sumiu,** o problema era outro: volte à tabela e escolha a linha seguinte. **Não peça "tenta de novo".** Cada rodada sai diferente, e sempre aparece uma que agrada, até quando todas estão erradas.
+**Se o defeito não sumiu,** o problema era outro: volte à tabela e escolha a linha seguinte. **Não peça "tenta de novo".** Cada rodada é um novo sorteio de palavras (slide 3): sempre aparece uma que agrada, até quando todas estão erradas.
 
 **Se nenhuma linha resolve,** talvez o problema não seja o pedido:
 - a informação não existe escrita em lugar nenhum;
@@ -202,6 +202,7 @@ Está pronto quando eu tenho 3 perguntas que eu não teria feito sozinho.
 - **Pedido 1:** uma tabela, nada decidido por ela e os casos de fora marcados para você. É a resposta que economiza a tarde.
 - **Pedido 2:** pontos que o seu critério não cobre, cada um com o motivo, e nenhuma decisão. Mostra o que faltava entrar na decisão.
 - **O que o pedido 2 aponta é hipótese:** confira na fonte antes de mudar o relatório.
+- **Algo que contraria o que você pensava.** Se tudo concordou, desconfie: a IA tende a concordar com quem pergunta.
 
 **Se o pedido 1 decidiu por você:** `Você decidiu [o quê]. Volte esse item e marque para eu conferir.`
 
@@ -354,7 +355,7 @@ Está pronto quando eu consigo refazer cada número na planilha, sozinho, em um 
 - Suposição marcada como suposição.
 - **Refaça um número na mão,** na planilha. Se bateu, o resto ganha crédito. Se não bateu, pare aqui.
 
-**Antes de levar qualquer número para a reunião:** `Antes de eu usar esse número: você executou um cálculo sobre todas as linhas, ou estimou olhando uma parte? Diga quantas linhas entraram na conta e quais colunas você usou.`
+**A IA também prevê número (slide 3): sem fazer a conta, escreve o valor provável. Antes de levar algum à reunião:** `Antes de eu usar esse número: você executou um cálculo sobre todas as linhas, ou estimou olhando uma parte? Diga quantas linhas entraram na conta e quais colunas você usou.`
 
 
 ## Exercício 7 · A planilha que você monta na mão
@@ -505,7 +506,7 @@ Está pronto quando eu sei se a hipótese aguenta, e o que eu confiro antes de l
 - **A evidência contra** apareceu, e não só a que confirma.
 - Nenhuma porcentagem sem fonte.
 
-**Se a sua IA não busca na internet,** tudo vai sair `[DE MEMÓRIA]`. A etiqueta fez o trabalho dela: avisou.
+**Se a sua IA não busca na internet,** tudo vai sair `[DE MEMÓRIA]`, isto é, previsto do que ela leu, não consultado (slide 3). A etiqueta fez o trabalho dela: avisou.
 
 **Se faltou etiqueta:** `Esta afirmação não tem etiqueta: "[o trecho]". Etiquete todas, e o que não tiver fonte vira [PRECISA VERIFICAR].`
 
@@ -527,7 +528,7 @@ Está pronto quando eu sei se a hipótese aguenta, e o que eu confiro antes de l
 
 ### Cole
 **Dois caminhos, à sua escolha:**
-- **No NotebookLM** (indicação): crie um caderno, suba as 3 fontes pelo link e cole as perguntas abaixo, uma de cada vez. Ele responde só com o que está nas fontes e mostra o trecho.
+- **No NotebookLM** (indicação; ferramenta do Google que responde só com os arquivos que você sobe): crie um caderno, suba as 3 fontes pelo link e cole as perguntas abaixo, uma de cada vez. Ele responde só com o que está nas fontes e mostra o trecho.
 - **Na sua IA,** numa conversa nova: cole o texto das 3 fontes entre as etiquetas `<fonte1>`, `<fonte2>` e `<fonte3>`, e depois as perguntas.
 
 **Primeiro:**
@@ -571,7 +572,7 @@ Vou te fazer três perguntas sobre estas fontes, uma de cada vez. Responda olhan
 - **Os números** do exercício 8.
 - **O que a pesquisa trouxe,** só com as fontes que passaram no exercício 10.
 - **Um relatório seu já entregue,** como gabarito de formato e de tamanho.
-- **Um design system,** para o relatório sair em HTML: o da Jangada Eletro, no material de exemplo, ou o da sua empresa.
+- **Um design system,** o guia de cores, letras e formatos de uma marca, para o relatório sair em HTML (a página que abre no navegador e vira PDF): o da Jangada Eletro, no material de exemplo, ou o da sua empresa.
 
 
 ### Cole
@@ -823,9 +824,10 @@ Está pronto quando eu tenho as perguntas que não teria feito sozinho. Que perg
 ### Confira
 **O que deve voltar:**
 - O claro e o vago, separados.
-- **O que ela assume sem provar, com o trecho.** O mais valioso costuma ser a premissa que nem está escrita.
+- **O que a proposta assume sem provar, com o trecho.** O mais valioso costuma ser a premissa que nem está escrita.
 - O que falta, como "não informado": custo total, multa, prazo.
 - **3 perguntas que o seu critério não faria,** e nenhuma recomendação.
+- **Algo que contraria o que você pensava.** Se tudo concordou, desconfie: a IA tende a concordar com quem pergunta.
 
 **Se veio uma recomendação:** `Não me dê a decisão. Me dê só o que falta entrar nela, com o trecho da proposta em cada ponto.`
 
@@ -884,7 +886,7 @@ Está pronto quando quem não estava na reunião sabe o que foi decidido, o que 
 
 **Se apareceu pendência que não está nas anotações:** `A pendência "[qual]" não está nas minhas anotações. De onde ela saiu? Se não saiu de lá, retire.`
 
-**Se ela preencheu um dono ou prazo que não estava lá:** `Você pôs "[o que pôs]" em "[a pendência]", mas as anotações não dizem isso. Deixe vazio e marque [sem dono] ou [sem prazo].`
+**Se a IA preencheu um dono ou prazo que não estava lá (é o padrão do slide 3: o nome mais provável):** `Você pôs "[o que pôs]" em "[a pendência]", mas as anotações não dizem isso. Deixe vazio e marque [sem dono] ou [sem prazo].`
 
 
 ## Exercício 17 · A pauta que cabe no tempo
@@ -926,7 +928,7 @@ Está pronto quando eu posso mandar a pauta hoje e cada pessoa sabe o que trazer
 - **A soma dos tempos cabe,** com o encerramento.
 - **O item da decisão não está por último.**
 - Cada item abre com **uma pergunta que pede resposta,** e não "Discussão sobre X".
-- O que cada pessoa traz, por papel. Se não cabia tudo, **ela disse o que tirar.**
+- O que cada pessoa traz, por papel. Se não cabia tudo, **a IA disse o que tirar.**
 
 **Se a soma não cabe:** `A soma dá [x] minutos, e a reunião tem [y]. Corte, e me diga o que saiu e por quê.`
 
@@ -973,6 +975,7 @@ Está pronto quando eu tenho as perguntas que não tinha previsto, e sei o que f
 - Cada uma com quem faria e uma linha de resposta **tirada do relatório.**
 - Onde o relatório não responde, **o que levar,** sem número inventado.
 - Uma pergunta para responder na abertura.
+- **Algo que contraria o que você pensava.** Se tudo concordou, desconfie: a IA tende a concordar com quem pergunta.
 
 **Se as perguntas eram as óbvias:** `Essas eu já tinha previsto. Me dê 3 que um [papel] cético faria e que não estão aí.`
 
@@ -1022,7 +1025,7 @@ Está pronto quando cada pessoa sabe, lendo só o e-mail, o que ela faz e até q
 **O que deve voltar:**
 - **No máximo 10 linhas,** começando pelo que importa.
 - As decisões, e quem faz o quê até quando.
-- **Sem abertura de cartório.**
+- **Sem abertura formal,** como "Venho por meio deste".
 - **Pendência sem prazo continua sem prazo,** com o pedido para o dono informar.
 
 **Se veio cerimônia:** `Tire a abertura e o fechamento de cortesia. Comece pela primeira decisão.`
@@ -1162,7 +1165,7 @@ Está pronto quando a pessoa lê, sente que foi ouvida e sabe o próximo passo, 
 
 ### Confira
 **O que deve voltar:**
-- **Reconhece com o fato dela,** e não com uma frase que serviria para qualquer cliente.
+- **Reconhece com o fato que o cliente contou,** e não com uma frase que serviria para qualquer cliente.
 - Sem admitir culpa, sem acusar ninguém.
 - **O próximo passo com data,** e o caminho para o privado.
 - **Nada prometido além do que você pode.** Até 120 palavras.
@@ -1181,7 +1184,7 @@ Está pronto quando a pessoa lê, sente que foi ouvida e sabe o próximo passo, 
 
 `Pensar junto` · ~15 min · **conversa nova**
 
-**A situação:** a tarefa que mais consome a sua semana ainda não tem cartão. Ela é o melhor lugar para começar: repete, aparece e você sabe quanto custa.
+**A situação:** a tarefa que mais consome a sua semana ainda não tem cartão. É o melhor lugar para começar: ela se repete toda semana, e você sabe quanto tempo custa.
 
 
 
