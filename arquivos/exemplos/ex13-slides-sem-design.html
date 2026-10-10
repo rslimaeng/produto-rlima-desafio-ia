@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queda de air fryer em Pernambuco</title>
+<style>
+  @page { size: 338.667mm 190.5mm; margin: 0; }
+
+  :root {
+    --ink: #1f2933;
+    --muted: #5b6770;
+    --line: #d9dee3;
+    --paper: #ffffff;
+    --soft: #f3f5f7;
+    --accent: #d9480f;
+    --accent-soft: #f7b79a;
+    --neg: #c92a2a;
+    --pos: #2b8a3e;
+    --gray: #aeb6bd;
+    --navy: #1c3d5a;
+    --warn-bg: #fff3bf;
+    --warn-ink: #7a5b00;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { background: #e4e7ea; }
+  body {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #e4e7ea;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Tela: slides empilhados, 16:9, escalando com a largura. Impressão: 338,667 x 190,5 mm */
+  .slide {
+    container-type: size;
+    position: relative;
+    width: min(calc(100vw - 32px), 1280px);
+    aspect-ratio: 16 / 9;
+    margin: 16px auto;
+    background: var(--paper);
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,.18);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  @media print {
+    html, body { background: #fff; }
+    .slide {
+      width: 338.667mm;
+      height: 190.5mm;
+      aspect-ratio: auto;
+      margin: 0;
+      box-shadow: none;
+      break-after: page;
+      page-break-after: always;
+    }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+  }
+
+  .inner {
+    position: absolute;
+    inset: 0;
+    padding: 4.2cqw 5.2cqw 3.6cqw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .num {
+    position: absolute;
+    top: 2.2cqw;
+    right: 3cqw;
+    font-size: 1.4cqw;
+    color: var(--muted);
+    letter-spacing: .05em;
+  }
+
+  h1.title {
+    font-size: 2.95cqw;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--navy);
+    max-width: 90cqw;
+  }
+  h1.title.long { font-size: 3.25cqw; }
+
+  .body {
+    flex: 1;
+    min-height: 0;
+    margin-top: 2.6cqw;
+    display: grid;
+    grid-template-columns: 34cqw 1fr;
+    gap: 4cqw;
+    align-items: center;
+  }
+
+  ul.bullets { list-style: none; }
+  ul.bullets li {
+    font-size: 2.1cqw;
+    line-height: 1.35;
+    padding-left: 1.8cqw;
+    position: relative;
+    margin-bottom: 1.5cqw;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .62em;
+    width: .7cqw;
+    height: .7cqw;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .visual { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; min-height: 0; }
+  .visual svg { width: 100%; height: 100%; max-height: 100%; }
+  svg text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--ink); }
+
+  .falta {
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-radius: .4cqw;
+    padding: 0 .5cqw;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Capa */
+  .cover { background: var(--navy); }
+  .cover .inner { justify-content: center; padding: 0 8cqw; }
+  .cover h1 { color: #fff; font-size: 5.6cqw; line-height: 1.1; font-weight: 700; max-width: 70cqw; }
+  .cover .sub { color: #c9d6e2; font-size: 2.3cqw; margin-top: 2.4cqw; }
+  .cover .bar { width: 9cqw; height: .7cqw; background: var(--accent); margin-bottom: 3cqw; }
+
+  /* Slide 1 */
+  .two-blocks { flex: 1; min-height: 0; margin-top: 3cqw; display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; }
+  .block { background: var(--soft); border-top: .6cqw solid var(--accent); border-radius: .6cqw; padding: 2.6cqw 3cqw; }
+  .block h2 { font-size: 2.6cqw; color: var(--navy); margin-bottom: 1.8cqw; }
+  .block ul.bullets li { font-size: 2.3cqw; }
+
+  /* Slide 6 */
+  .stamp {
+    display: inline-block;
+    font-size: 1.8cqw;
+    font-weight: 700;
+    color: var(--warn-ink);
+    border: .25cqw dashed var(--warn-ink);
+    background: var(--warn-bg);
+    border-radius: .6cqw;
+    padding: .6cqw 1.4cqw;
+    margin-bottom: 1.8cqw;
+  }
+  .source {
+    position: absolute;
+    left: 5.2cqw;
+    right: 5.2cqw;
+    bottom: 1.6cqw;
+    font-size: 1.5cqw;
+    color: var(--muted);
+    border-top: .1cqw solid var(--line);
+    padding-top: .7cqw;
+  }
+
+  /* Slide 7 */
+  .flow { margin-top: 2.6cqw; display: flex; align-items: stretch; gap: 1.2cqw; }
+  .flow .box {
+    flex: 1;
+    background: var(--soft);
+    border: .15cqw solid var(--line);
+    border-radius: .8cqw;
+    text-align: center;
+    padding: 2cqw .6cqw;
+    font-size: 2.1cqw;
+    font-weight: 600;
+    color: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .flow .arrow { align-self: center; font-size: 2.6cqw; color: var(--muted); }
+  .flow .cause { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .flow .decision { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .flow .group { flex: 4; display: flex; gap: 1cqw; }
+  .s7-bullets { margin-top: 3cqw; max-width: 82cqw; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="slide cover">
+  <div class="inner">
+    <div class="bar"></div>
+    <h1>Queda de air fryer em Pernambuco</h1>
+    <p class="sub">Apresentação ao diretor comercial · 5 minutos</p>
+  </div>
+</section>
+
+<!-- SLIDE 1 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">1 / 7</span>
+    <h1 class="title long">Peço autorização para diagnosticar a queda de air fryer em Pernambuco e adiar qualquer corte de compra ou de meta até o resultado</h1>
+    <div class="two-blocks">
+      <div class="block">
+        <h2>O que peço</h2>
+        <ul class="bullets">
+          <li>Diagnóstico cobre estoque, preço, promoção e unidades vendidas.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h2>Por que agora</h2>
+        <ul class="bullets">
+          <li>Por quê: a causa da queda ainda não foi identificada.</li>
+          <li>Cortar agora é arriscar reagir à hipótese errada.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">2 / 7</span>
+    <h1 class="title">A rede vendeu 6,1% menos em setembro: R$ 2.261 a menos que em agosto</h1>
+    <div class="body">
+      <ul class="bullets">
+        <li>Agosto: R$ 37.190. Setembro: R$ 34.929.</li>
+        <li>É a queda que chegou até você.</li>
+      </ul>
+      <div class="visual">
+        <svg viewBox="0 0 640 330" role="img" aria-label="Vendas da rede: agosto R$ 37.190 e setembro R$ 34.929, diferença de menos R$ 2.261">
+          <line x1="40" y1="290" x2="600" y2="290" stroke="#9aa3ab" stroke-width="2"/>
+          <rect x="90" y="50" width="150" height="240" fill="#7d93a8"/>
+          <rect x="300" y="64.6" width="150" height="225.4" fill="var(--navy)"/>
+          <text x="165" y="38" text-anchor="middle" font-size="22" font-weight="700">R$ 37.190</text>
+          <text x="375" y="53" text-anchor="middle" font-size="22" font-weight="700">R$ 34.929</text>
+          <text x="165" y="320" text-anchor="middle" font-size="22">Agosto</text>
+          <text x="375" y="320" text-anchor="middle" font-size="22">Setembro</text>
+          <!-- diferença -->
+          <line x1="240" y1="50" x2="478" y2="50" stroke="var(--neg)" stroke-width="2" stroke-dasharray="6 5"/>
+          <line x1="470" y1="50" x2="470" y2="64.6" stroke="var(--neg)" stroke-width="4"/>
+          <text x="486" y="62" font-size="26" font-weight="800" fill="var(--neg)" style="fill:var(--neg)">−R$ 2.261</text>
+          <text x="486" y="86" font-size="18" style="fill:var(--neg)">(−6,1%)</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">3 / 7</span>
+    <h1 class="title">Pernambuco explica a queda da rede: perdeu R$ 2.575, e Ceará e Rio Grande do Norte compensaram só R$ 314</h1>
+    <div class="body">
+      <ul class="bullets">
+        <li>PE: −19,1%, −R$ 2.575.</li>
+        <li>CE: +R$ 200. RN: +R$ 114. Os dois cresceram 1,3%.</li>
+      </ul>
+      <div class="visual">
+        <svg viewBox="0 0 640 340" role="img" aria-label="Cascata por estado: PE menos R$ 2.575, CE mais R$ 200, RN mais R$ 114, total da rede menos R$ 2.261">
+          <line x1="30" y1="60" x2="610" y2="60" stroke="#9aa3ab" stroke-width="2"/>
+          <text x="30" y="50" font-size="16" style="fill:var(--muted)">R$ 0</text>
+          <!-- PE -->
+          <rect x="50" y="60" width="100" height="220" fill="var(--neg)"/>
+          <!-- CE -->
+          <rect x="195" y="262.9" width="100" height="17.1" fill="var(--pos)"/>
+          <!-- RN -->
+          <rect x="340" y="253.1" width="100" height="9.8" fill="var(--pos)"/>
+          <!-- Total -->
+          <rect x="485" y="60" width="100" height="193.1" fill="var(--navy)"/>
+          <!-- conectores -->
+          <line x1="150" y1="280" x2="195" y2="280" stroke="#9aa3ab" stroke-dasharray="4 4"/>
+          <line x1="295" y1="262.9" x2="340" y2="262.9" stroke="#9aa3ab" stroke-dasharray="4 4"/>
+          <line x1="440" y1="253.1" x2="485" y2="253.1" stroke="#9aa3ab" stroke-dasharray="4 4"/>
+          <!-- valores -->
+          <text x="100" y="304" text-anchor="middle" font-size="22" font-weight="700" style="fill:var(--neg)">−R$ 2.575</text>
+          <text x="245" y="304" text-anchor="middle" font-size="22" font-weight="700" style="fill:var(--pos)">+R$ 200</text>
+          <text x="390" y="286" text-anchor="middle" font-size="22" font-weight="700" style="fill:var(--pos)">+R$ 114</text>
+          <text x="535" y="277" text-anchor="middle" font-size="22" font-weight="700" style="fill:var(--navy)">−R$ 2.261</text>
+          <!-- categorias -->
+          <text x="100" y="332" text-anchor="middle" font-size="20">PE</text>
+          <text x="245" y="332" text-anchor="middle" font-size="20">CE</text>
+          <text x="390" y="332" text-anchor="middle" font-size="20">RN</text>
+          <text x="535" y="332" text-anchor="middle" font-size="20">Total da rede</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">4 / 7</span>
+    <h1 class="title">Em Pernambuco a queda é de um produto: a air fryer perdeu R$ 2.789, mais que a queda da rede inteira</h1>
+    <div class="body">
+      <ul class="bullets">
+        <li>Air fryer em PE: de R$ 6.380 para R$ 3.591 (−43,7%).</li>
+        <li>Cafeteira, liquidificador e ventilador somaram +R$ 214 (+3,0%).</li>
+        <li>Se a air fryer tivesse repetido agosto, a rede fecharia 1,4% acima de agosto.</li>
+      </ul>
+      <div class="visual">
+        <svg viewBox="0 0 640 340" role="img" aria-label="Pernambuco: air fryer de R$ 6.380 para R$ 3.591; os outros três produtos somaram mais R$ 214">
+          <!-- esquerda: air fryer, nível -->
+          <text x="130" y="26" text-anchor="middle" font-size="19" font-weight="700" style="fill:var(--accent)">Air fryer em PE</text>
+          <line x1="20" y1="270" x2="250" y2="270" stroke="#9aa3ab" stroke-width="2"/>
+          <rect x="45" y="40" width="80" height="230" fill="var(--accent-soft)"/>
+          <rect x="145" y="140.7" width="80" height="129.3" fill="var(--accent)"/>
+          <text x="85" y="34" text-anchor="middle" font-size="0"> </text>
+          <text x="85" y="258" text-anchor="middle" font-size="19" font-weight="700" style="fill:#7a2e07">6.380</text>
+          <text x="185" y="258" text-anchor="middle" font-size="19" font-weight="700" style="fill:#fff">3.591</text>
+          <text x="85" y="296" text-anchor="middle" font-size="18">Agosto</text>
+          <text x="185" y="296" text-anchor="middle" font-size="18">Setembro</text>
+          <text x="135" y="326" text-anchor="middle" font-size="15" style="fill:var(--muted)">vendas em R$</text>
+
+          <!-- direita: variação, mesma escala -->
+          <text x="450" y="26" text-anchor="middle" font-size="19" font-weight="700">Variação agosto → setembro</text>
+          <line x1="300" y1="170" x2="610" y2="170" stroke="#9aa3ab" stroke-width="2"/>
+          <rect x="335" y="170" width="90" height="100.4" fill="var(--accent)"/>
+          <rect x="475" y="162.3" width="90" height="7.7" fill="var(--gray)"/>
+          <text x="380" y="228" text-anchor="middle" font-size="21" font-weight="700" style="fill:#fff">−R$ 2.789</text>
+          <text x="520" y="148" text-anchor="middle" font-size="21" font-weight="700" style="fill:var(--muted)">+R$ 214</text>
+          <text x="380" y="296" text-anchor="middle" font-size="18">Air fryer</text>
+          <text x="520" y="290" text-anchor="middle" font-size="16" style="fill:var(--muted)">Cafeteira,</text>
+          <text x="520" y="310" text-anchor="middle" font-size="16" style="fill:var(--muted)">liquidificador</text>
+          <text x="520" y="330" text-anchor="middle" font-size="16" style="fill:var(--muted)">e ventilador</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">5 / 7</span>
+    <h1 class="title">Pernambuco depende da air fryer: ela caiu de 47% para 33% das vendas do estado em um mês</h1>
+    <div class="body">
+      <ul class="bullets">
+        <li>Se setembro virar o novo patamar, a rede vende cerca de R$ 2.261 a menos por mês que em agosto.</li>
+        <li>Sem tratar o problema, PE continua pressionando o resultado da rede.</li>
+      </ul>
+      <div class="visual">
+        <svg viewBox="0 0 640 340" role="img" aria-label="Fatia da air fryer nas vendas de Pernambuco: 47% em agosto e 33% em setembro">
+          <text x="320" y="24" text-anchor="middle" font-size="18" style="fill:var(--muted)">Participação nas vendas de PE (100%)</text>
+          <!-- Agosto: topo 40, base 290, altura 250 -->
+          <rect x="110" y="40" width="170" height="132.5" fill="var(--gray)"/>
+          <rect x="110" y="172.5" width="170" height="117.5" fill="var(--accent)"/>
+          <!-- Setembro -->
+          <rect x="360" y="40" width="170" height="167.5" fill="var(--gray)"/>
+          <rect x="360" y="207.5" width="170" height="82.5" fill="var(--accent)"/>
+          <text x="195" y="112" text-anchor="middle" font-size="20" font-weight="600">Demais 53%</text>
+          <text x="195" y="238" text-anchor="middle" font-size="26" font-weight="800" style="fill:#fff">Air fryer 47%</text>
+          <text x="445" y="130" text-anchor="middle" font-size="20" font-weight="600">Demais 67%</text>
+          <text x="445" y="256" text-anchor="middle" font-size="26" font-weight="800" style="fill:#fff">Air fryer 33%</text>
+          <text x="195" y="324" text-anchor="middle" font-size="22">Agosto</text>
+          <text x="445" y="324" text-anchor="middle" font-size="22">Setembro</text>
+          <!-- ligação -->
+          <line x1="280" y1="172.5" x2="360" y2="207.5" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">6 / 7</span>
+    <h1 class="title">A air fryer está em 64% dos domicílios (eram 36,2% em 2022), mas isso não prova que as vendas desaceleraram</h1>
+    <div class="body">
+      <div>
+        <span class="stamp">Hipótese, não confirmada</span>
+        <ul class="bullets">
+          <li>Mede quantas casas têm o produto. Não traz venda de 2026 nem recorte por estado.</li>
+          <li>Saturação é hipótese, não confirmada. <span class="falta">[FALTA: venda de air fryer em CE e RN para testar se o movimento é nacional]</span></li>
+        </ul>
+      </div>
+      <div class="visual">
+        <svg viewBox="0 0 640 310" role="img" aria-label="Domicílios com air fryer: 36,2% em 2022 e 64% em 2025">
+          <line x1="80" y1="260" x2="580" y2="260" stroke="#9aa3ab" stroke-width="2"/>
+          <rect x="140" y="129.9" width="150" height="130.1" fill="var(--gray)"/>
+          <rect x="370" y="30" width="150" height="230" fill="var(--navy)"/>
+          <text x="215" y="120" text-anchor="middle" font-size="26" font-weight="700">36,2%</text>
+          <text x="445" y="22" text-anchor="middle" font-size="26" font-weight="700">64%</text>
+          <text x="215" y="292" text-anchor="middle" font-size="22">2022</text>
+          <text x="445" y="292" text-anchor="middle" font-size="22">2025</text>
+          <text x="330" y="310" text-anchor="middle" font-size="0"> </text>
+        </svg>
+      </div>
+    </div>
+    <div class="source">Fonte: Worldpanel by Numerator, citado pelo MilkPoint em 10/06/2026.</div>
+  </div>
+</section>
+
+<!-- SLIDE 7 -->
+<section class="slide">
+  <div class="inner">
+    <span class="num">7 / 7</span>
+    <h1 class="title">Quatro cruzamentos separam volume de preço e dão a causa em <span class="falta">[FALTA: prazo do diagnóstico]</span> — antes de qualquer corte</h1>
+    <div class="flow">
+      <div class="group">
+        <div class="box">Estoque</div>
+        <div class="box">Preço</div>
+        <div class="box">Promoção</div>
+        <div class="box">Unidades vendidas</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="box cause">Causa</div>
+      <div class="arrow">→</div>
+      <div class="box decision">Decisão sobre compra e meta</div>
+    </div>
+    <ul class="bullets s7-bullets">
+      <li>Hoje os números estão em R$ e não separam volume de preço.</li>
+      <li>Estoque, preço, promoção e unidades vendidas respondem o que mudou.</li>
+      <li>Até lá, compra e meta de air fryer ficam como estão. <span class="falta">[FALTA: custo ou esforço do diagnóstico, se o diretor perguntar]</span></li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>

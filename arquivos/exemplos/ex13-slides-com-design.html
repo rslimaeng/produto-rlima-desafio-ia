@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jangada Eletro · Air fryer em Pernambuco</title>
+<style>
+  :root {
+    --mar: #1d4f73;
+    --mar-escuro: #143a56;
+    --mar-claro: #e8f0f6;
+    --vela: #d9822b;
+    --vela-texto: #9a5413;
+    --tinta: #1c2430;
+    --tinta-suave: #55606d;
+    --papel: #ffffff;
+    --areia: #f5f3ee;
+    --linha: #e3e0d8;
+    --atencao: #8a6218;
+    --atencao-fundo: #faf2dd;
+    --serif: Cambria, Georgia, serif;
+    --sans: Calibri, Carlito, Arial, sans-serif;
+  }
+
+  @page { size: 338.667mm 190.5mm; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--areia);
+    color: var(--tinta);
+    font-family: var(--sans);
+    font-size: 20px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .slide {
+    position: relative;
+    width: 338.667mm;
+    height: 190.5mm;
+    flex: none;
+    overflow: hidden;
+    background: var(--papel);
+    padding: 44px 64px 0 64px;
+    outline: 1px solid var(--linha);
+    break-after: page;
+    page-break-after: always;
+  }
+  .slide:last-child { break-after: auto; page-break-after: auto; }
+
+  @media print {
+    html, body { background: var(--papel); }
+    .deck { display: block; padding: 0; gap: 0; }
+    .slide { outline: none; }
+  }
+
+  /* 1. sobretítulo */
+  .sobre {
+    font: 700 14px/1 var(--sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--vela-texto);
+    margin: 0;
+  }
+
+  /* 2. título */
+  h1, h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.2;
+    color: var(--mar);
+    margin: 10px 0 0 0;
+  }
+
+  /* 4. miolo */
+  .miolo {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    gap: 56px;
+    margin-top: 26px;
+    align-items: start;
+  }
+
+  .grafico svg { display: block; }
+  .grafico svg text { font-family: var(--sans); fill: var(--tinta); }
+  .grafico svg .val { font-size: 20px; font-weight: 700; }
+  .grafico svg .cat { font-size: 20px; fill: var(--tinta-suave); }
+  .grafico svg .dentro { font-size: 18px; }
+
+  .big {
+    font: 700 48px/1 var(--sans);
+    color: var(--mar);
+    margin: 0;
+  }
+  .big-sub {
+    color: var(--tinta-suave);
+    margin: 8px 0 0 0;
+    line-height: 1.3;
+  }
+
+  ul.pontos {
+    margin: 26px 0 0 0;
+    padding-left: 22px;
+  }
+  ul.pontos li {
+    margin: 0 0 14px 0;
+    line-height: 1.35;
+  }
+  ul.pontos li::marker { color: var(--mar); }
+
+  .fonte {
+    font-size: 12px;
+    color: var(--tinta-suave);
+    margin: 10px 0 0 0;
+    line-height: 1.3;
+  }
+
+  /* selo de estado */
+  .selo {
+    display: inline-block;
+    font: 700 14px/1 var(--sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background: var(--atencao-fundo);
+    color: var(--atencao);
+    vertical-align: 2px;
+    margin-right: 6px;
+  }
+
+  /* lacuna do roteiro, visível */
+  .falta {
+    background: var(--atencao-fundo);
+    color: var(--atencao);
+    padding: 0 6px;
+    border-radius: 2px;
+  }
+
+  /* slide 1 */
+  .cartoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .cartao {
+    background: var(--areia);
+    border: 1px solid var(--linha);
+    padding: 28px 32px 14px 32px;
+    min-height: 250px;
+  }
+  .cartao h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--mar);
+    margin: 0;
+  }
+  .cartao ul.pontos { margin-top: 18px; }
+
+  /* slide 7 */
+  .fluxo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .passo {
+    flex: none;
+    width: 128px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--areia);
+    border: 1px solid var(--linha);
+    font-weight: 700;
+    color: var(--mar);
+    text-align: center;
+  }
+  .causa {
+    flex: none;
+    width: 128px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--mar);
+    color: var(--papel);
+    font-weight: 700;
+  }
+  .decisao {
+    flex: 1;
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    background: var(--mar-claro);
+    border-left: 6px solid var(--mar);
+    padding: 12px 20px;
+    font-weight: 700;
+    color: var(--tinta);
+    line-height: 1.3;
+  }
+  .seta { flex: none; display: block; }
+
+  /* 5. rodapé */
+  .rodape {
+    position: absolute;
+    left: 64px;
+    right: 64px;
+    bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--linha);
+    font-size: 12px;
+    color: var(--tinta-suave);
+  }
+
+  /* capa */
+  .capa {
+    background: var(--mar-escuro);
+    color: var(--papel);
+    padding: 0 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .capa h1 {
+    color: var(--papel);
+    margin: 0;
+    max-width: 900px;
+  }
+  .capa .filete {
+    width: 140px;
+    height: 6px;
+    background: var(--vela);
+    margin: 28px 0 24px 0;
+  }
+  .capa p { margin: 0; color: var(--mar-claro); }
+  .capa .marca {
+    position: absolute;
+    left: 64px;
+    bottom: 40px;
+    font-size: 12px;
+    color: var(--mar-claro);
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- CAPA -->
+  <section class="slide capa">
+    <h1>Queda de air fryer em Pernambuco</h1>
+    <div class="filete"></div>
+    <p>Apresentação ao diretor comercial</p>
+    <div class="marca">Jangada Eletro</div>
+  </section>
+
+  <!-- SLIDE 1 -->
+  <section class="slide">
+    <p class="sobre">Pedido</p>
+    <h2>Peço autorização para diagnosticar a queda de air fryer em Pernambuco e adiar qualquer corte de compra ou de meta até o resultado</h2>
+    <div class="cartoes">
+      <div class="cartao">
+        <h3>O que peço</h3>
+        <ul class="pontos">
+          <li>Diagnóstico cobre estoque, preço, promoção e unidades vendidas.</li>
+        </ul>
+      </div>
+      <div class="cartao">
+        <h3>Por que agora</h3>
+        <ul class="pontos">
+          <li>Por quê: a causa da queda ainda não foi identificada.</li>
+          <li>Cortar agora é arriscar reagir à hipótese errada.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>1</span></div>
+  </section>
+
+  <!-- SLIDE 2 -->
+  <section class="slide">
+    <p class="sobre">Rede</p>
+    <h2>A rede vendeu 6,1% menos em setembro: R$ 2.261 a menos que em agosto</h2>
+    <div class="miolo">
+      <div class="grafico">
+        <svg width="600" height="380" viewBox="0 0 600 380" role="img" aria-label="Vendas da rede: agosto R$ 37.190, setembro R$ 34.929, diferença de menos R$ 2.261">
+          <line x1="30" y1="330" x2="570" y2="330" stroke="#e3e0d8" stroke-width="2"/>
+          <rect x="70" y="60" width="150" height="270" fill="#1d4f73"/>
+          <rect x="300" y="76.4" width="150" height="253.6" fill="#d9822b"/>
+          <line x1="220" y1="60" x2="470" y2="60" stroke="#55606d" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <line x1="480" y1="60" x2="480" y2="76.4" stroke="#1d4f73" stroke-width="2"/>
+          <line x1="474" y1="60" x2="486" y2="60" stroke="#1d4f73" stroke-width="2"/>
+          <line x1="474" y1="76.4" x2="486" y2="76.4" stroke="#1d4f73" stroke-width="2"/>
+          <text class="val" x="145" y="46" text-anchor="middle">R$ 37.190</text>
+          <text class="val" x="375" y="46" text-anchor="middle">R$ 34.929</text>
+          <text class="val" x="492" y="75" style="fill:#1d4f73">−R$ 2.261</text>
+          <text class="cat" x="145" y="358" text-anchor="middle">Agosto</text>
+          <text class="cat" x="375" y="358" text-anchor="middle">Setembro</text>
+        </svg>
+      </div>
+      <div>
+        <p class="big">−R$ 2.261</p>
+        <p class="big-sub">Setembro contra agosto</p>
+        <ul class="pontos">
+          <li>Agosto: R$ 37.190. Setembro: R$ 34.929.</li>
+          <li>É a queda que chegou até você.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>2</span></div>
+  </section>
+
+  <!-- SLIDE 3 -->
+  <section class="slide">
+    <p class="sobre">Estados</p>
+    <h2>Pernambuco explica a queda da rede: perdeu R$ 2.575, e Ceará e Rio Grande do Norte compensaram só R$ 314</h2>
+    <div class="miolo">
+      <div class="grafico">
+        <svg width="600" height="380" viewBox="0 0 600 380" role="img" aria-label="Cascata por estado: PE menos R$ 2.575, CE mais R$ 200, RN mais R$ 114, rede menos R$ 2.261">
+          <line x1="30" y1="50" x2="570" y2="50" stroke="#55606d" stroke-width="1.5"/>
+          <!-- conectores -->
+          <line x1="150" y1="300" x2="180" y2="300" stroke="#55606d" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="280" y1="280.58" x2="310" y2="280.58" stroke="#55606d" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <line x1="410" y1="269.51" x2="440" y2="269.51" stroke="#55606d" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- barras -->
+          <rect x="50" y="50" width="100" height="250" fill="#d9822b"/>
+          <rect x="180" y="280.58" width="100" height="19.42" fill="#1d4f73"/>
+          <rect x="310" y="269.51" width="100" height="11.07" fill="#1d4f73"/>
+          <rect x="440" y="50" width="100" height="219.51" fill="#55606d"/>
+          <!-- valores -->
+          <text class="val" x="100" y="326" text-anchor="middle">−R$ 2.575</text>
+          <text class="val" x="230" y="270" text-anchor="middle">+R$ 200</text>
+          <text class="val" x="360" y="259" text-anchor="middle">+R$ 114</text>
+          <text class="val" x="490" y="295" text-anchor="middle">−R$ 2.261</text>
+          <!-- categorias -->
+          <text class="cat" x="100" y="358" text-anchor="middle">PE</text>
+          <text class="cat" x="230" y="358" text-anchor="middle">CE</text>
+          <text class="cat" x="360" y="358" text-anchor="middle">RN</text>
+          <text class="cat" x="490" y="358" text-anchor="middle">Rede</text>
+        </svg>
+      </div>
+      <div>
+        <p class="big">−R$ 2.575</p>
+        <p class="big-sub">Pernambuco, setembro contra agosto</p>
+        <ul class="pontos">
+          <li>PE: −19,1%, −R$ 2.575.</li>
+          <li>CE: +R$ 200. RN: +R$ 114. Os dois cresceram 1,3%.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>3</span></div>
+  </section>
+
+  <!-- SLIDE 4 -->
+  <section class="slide">
+    <p class="sobre">Produto</p>
+    <h2>Em Pernambuco a queda é de um produto: a air fryer perdeu R$ 2.789, mais que a queda da rede inteira</h2>
+    <div class="miolo">
+      <div class="grafico">
+        <svg width="600" height="380" viewBox="0 0 600 380" role="img" aria-label="Air fryer em PE: agosto R$ 6.380, setembro R$ 3.591">
+          <line x1="30" y1="330" x2="570" y2="330" stroke="#e3e0d8" stroke-width="2"/>
+          <rect x="110" y="70" width="150" height="260" fill="#1d4f73"/>
+          <rect x="340" y="183.7" width="150" height="146.3" fill="#d9822b"/>
+          <text class="val" x="185" y="56" text-anchor="middle">R$ 6.380</text>
+          <text class="val" x="415" y="170" text-anchor="middle">R$ 3.591</text>
+          <text class="cat" x="185" y="358" text-anchor="middle">Agosto</text>
+          <text class="cat" x="415" y="358" text-anchor="middle">Setembro</text>
+        </svg>
+      </div>
+      <div>
+        <p class="big">−R$ 2.789</p>
+        <p class="big-sub">Air fryer em PE, setembro contra agosto</p>
+        <ul class="pontos">
+          <li>Air fryer em PE: de R$ 6.380 para R$ 3.591 (−43,7%).</li>
+          <li>Cafeteira, liquidificador e ventilador somaram +R$ 214 (+3,0%).</li>
+          <li>Se a air fryer tivesse repetido agosto, a rede fecharia 1,4% acima de agosto.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>4</span></div>
+  </section>
+
+  <!-- SLIDE 5 -->
+  <section class="slide">
+    <p class="sobre">Dependência</p>
+    <h2>Pernambuco depende da air fryer: ela caiu de 47% para 33% das vendas do estado em um mês</h2>
+    <div class="miolo">
+      <div class="grafico">
+        <svg width="600" height="380" viewBox="0 0 600 380" role="img" aria-label="Fatia da air fryer nas vendas de PE: 47% em agosto, 33% em setembro">
+          <!-- agosto -->
+          <rect x="90" y="30" width="180" height="159" fill="#1d4f73"/>
+          <rect x="90" y="189" width="180" height="141" fill="#d9822b"/>
+          <text class="dentro" x="180" y="104" text-anchor="middle" style="fill:#ffffff">Demais produtos</text>
+          <text class="val" x="180" y="130" text-anchor="middle" style="fill:#ffffff">53%</text>
+          <text class="dentro" x="180" y="253" text-anchor="middle">Air fryer</text>
+          <text class="val" x="180" y="279" text-anchor="middle">47%</text>
+          <!-- setembro -->
+          <rect x="330" y="30" width="180" height="201" fill="#1d4f73"/>
+          <rect x="330" y="231" width="180" height="99" fill="#d9822b"/>
+          <text class="dentro" x="420" y="125" text-anchor="middle" style="fill:#ffffff">Demais produtos</text>
+          <text class="val" x="420" y="151" text-anchor="middle" style="fill:#ffffff">67%</text>
+          <text class="dentro" x="420" y="276" text-anchor="middle">Air fryer</text>
+          <text class="val" x="420" y="302" text-anchor="middle">33%</text>
+          <text class="cat" x="180" y="358" text-anchor="middle">Agosto</text>
+          <text class="cat" x="420" y="358" text-anchor="middle">Setembro</text>
+        </svg>
+      </div>
+      <div>
+        <p class="big">33%</p>
+        <p class="big-sub">Fatia da air fryer nas vendas de PE em setembro; em agosto era 47%</p>
+        <ul class="pontos">
+          <li>Se setembro virar o novo patamar, a rede vende cerca de R$ 2.261 a menos por mês que em agosto.</li>
+          <li>Sem tratar o problema, PE continua pressionando o resultado da rede.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>5</span></div>
+  </section>
+
+  <!-- SLIDE 6 -->
+  <section class="slide">
+    <p class="sobre">Dado de fora</p>
+    <h2>A air fryer está em 64% dos domicílios (eram 36,2% em 2022), mas isso não prova que as vendas desaceleraram</h2>
+    <div class="miolo">
+      <div>
+        <div class="grafico">
+          <svg width="600" height="350" viewBox="0 0 600 350" role="img" aria-label="Domicílios com air fryer: 36,2% em 2022, 64% em 2025">
+            <line x1="30" y1="300" x2="570" y2="300" stroke="#e3e0d8" stroke-width="2"/>
+            <rect x="110" y="152.9" width="150" height="147.1" fill="#1d4f73"/>
+            <rect x="340" y="40" width="150" height="260" fill="#d9822b"/>
+            <text class="val" x="185" y="140" text-anchor="middle">36,2%</text>
+            <text class="val" x="415" y="28" text-anchor="middle">64%</text>
+            <text class="cat" x="185" y="328" text-anchor="middle">2022</text>
+            <text class="cat" x="415" y="328" text-anchor="middle">2025</text>
+          </svg>
+        </div>
+        <p class="fonte">Fonte: Worldpanel by Numerator, citado pelo MilkPoint em 10/06/2026.</p>
+      </div>
+      <div>
+        <p class="big">64%</p>
+        <p class="big-sub">dos domicílios têm air fryer; eram 36,2% em 2022</p>
+        <ul class="pontos">
+          <li>Mede quantas casas têm o produto. Não traz venda de 2026 nem recorte por estado.</li>
+          <li><span class="selo">Hipótese</span>Saturação é hipótese, não confirmada. <span class="falta">[FALTA: venda de air fryer em CE e RN para testar se o movimento é nacional]</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>6</span></div>
+  </section>
+
+  <!-- SLIDE 7 -->
+  <section class="slide">
+    <p class="sobre">Diagnóstico</p>
+    <h2>Quatro cruzamentos separam volume de preço e dão a causa em <span class="falta">[FALTA: prazo do diagnóstico]</span> — antes de qualquer corte</h2>
+    <ul class="pontos" style="margin-top:26px">
+      <li>Hoje os números estão em R$ e não separam volume de preço.</li>
+      <li>Estoque, preço, promoção e unidades vendidas respondem o que mudou.</li>
+      <li>Até lá, compra e meta de air fryer ficam como estão. <span class="falta">[FALTA: custo ou esforço do diagnóstico, se o diretor perguntar]</span></li>
+    </ul>
+    <div class="fluxo">
+      <div class="passo">Estoque</div>
+      <div class="passo">Preço</div>
+      <div class="passo">Promoção</div>
+      <div class="passo">Unidades</div>
+      <svg class="seta" width="36" height="16" viewBox="0 0 36 16" aria-hidden="true"><line x1="0" y1="8" x2="28" y2="8" stroke="#55606d" stroke-width="2"/><polygon points="26,2 36,8 26,14" fill="#55606d"/></svg>
+      <div class="causa">Causa</div>
+      <svg class="seta" width="36" height="16" viewBox="0 0 36 16" aria-hidden="true"><line x1="0" y1="8" x2="28" y2="8" stroke="#55606d" stroke-width="2"/><polygon points="26,2 36,8 26,14" fill="#55606d"/></svg>
+      <div class="decisao">Decisão sobre compra e meta</div>
+    </div>
+    <div class="rodape"><span>Jangada Eletro</span><span>7</span></div>
+  </section>
+
+</div>
+</body>
+</html>

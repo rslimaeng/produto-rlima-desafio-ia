@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Desafio IA no Trabalho · os 25 exercícios</title>
+<meta name="description" content="Desafio Relatório, Planilha e Slides com IA em 7 Dias: os 25 exercícios para copiar, com o material de exemplo e o que conferir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Tokens resolvidos de 17-padrao-visual/templates-ppt/tokens-slides.css (via nucleo/tokens.css),
+   colados em 03/10/2026 para a página ser autocontida no GitHub Pages. Tema claro, como o PDF. */
+:root{
+  --ink:#1a1f2e; --ink-soft:#5A5247;
+  --accent:#3b5b6b; --accent-dark:#2c4753; --accent-bg:#edf1f3; --accent-line:#c5d5dc;
+  --warm:#c69264; --warm-dark:#8f5628; --warm-capa:#d7b38f; --warm-bg:#f6ecdf; --warm-line:#e6cfb4;
+  --ok-bg:#eaf0eb; --ok-texto:#4a6551; --crit-bg:#f7ebe9; --crit-texto:#8c4139;
+  --papel:#ffffff; --bg-warm:#f1f0ea; --border:#e5e2da; --border-strong:#d3cfc4;
+  --titulo:'Montserrat',Calibri,"Segoe UI",Arial,sans-serif;
+  --corpo:'DM Sans',Calibri,"Segoe UI",Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,"SF Mono",Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg-warm);color:var(--ink);font-family:var(--corpo);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+strong,b{color:var(--ink)}
+em,i{font-style:normal}
+code{font-family:var(--mono);font-size:.88em;background:var(--accent-bg);padding:1px 5px;border-radius:4px;color:var(--accent-dark);word-break:break-word}
+.miolo{max-width:900px;margin:0 auto;padding:0 16px}
+
+/* ---- topo ---- */
+.topo{background:var(--accent-dark);color:#fff;padding:32px 0 64px}
+.topo img{height:54px;display:block;margin-bottom:34px}
+.etq{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm-capa);border:1px solid rgba(215,179,143,.5);border-radius:4px;padding:5px 10px;margin-bottom:16px}
+h1{font-family:var(--titulo);font-size:clamp(28px,5vw,42px);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.topo .sub{color:#d3cfc4;font-size:18px;margin-top:12px;max-width:640px}
+.regua{width:90px;height:3px;background:var(--warm);margin:22px 0 0}
+main{padding-bottom:64px}
+main>.miolo{margin-top:-34px;position:relative}
+
+/* ---- blocos ---- */
+.bloco{background:var(--papel);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:18px}
+.olho{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm-dark);margin-bottom:6px}
+h2{font-family:var(--titulo);font-size:23px;line-height:1.25;color:var(--accent-dark);margin-bottom:8px}
+h3{font-family:var(--titulo);font-size:18px;color:var(--accent-dark);margin:0 0 6px}
+.bloco>p{color:var(--ink-soft)}
+.passos{list-style:none;counter-reset:p;display:grid;gap:12px;margin-top:16px}
+.passos li{counter-increment:p;display:flex;gap:12px;align-items:flex-start;color:var(--ink-soft)}
+.passos li::before{content:counter(p);flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
+/* o cartão explicado */
+.cartao-guia{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
+.cartao-guia div{border-radius:10px;padding:14px 16px;font-size:14.5px;color:var(--ink-soft)}
+.cartao-guia b{display:block;font-family:var(--titulo);font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.g-traga{background:var(--bg-warm)} .g-traga b{color:var(--ink-soft)}
+.g-cole{background:var(--accent-bg);border-left:3px solid var(--accent)} .g-cole b{color:var(--accent-dark)}
+.g-confira{background:var(--papel);border:1px solid var(--warm);border-top:3px solid var(--warm)} .g-confira b{color:var(--warm-dark)}
+.legenda{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--ink-soft)}
+.legenda span{display:inline-flex;align-items:center;gap:8px}
+
+/* botões */
+.botoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.botao{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:11px 18px;border-radius:9px}
+.botao:hover{background:var(--accent-dark)}
+.botao.claro{background:var(--accent-bg);color:var(--accent-dark);border:1px solid var(--accent-line)}
+.botao.off{background:var(--bg-warm);color:var(--ink-soft);border:1px dashed var(--border-strong);pointer-events:none}
+.botao small{font-family:var(--mono);font-weight:400;font-size:11.5px;opacity:.85}
+
+/* fundamentos */
+.fund{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.fund a{display:block;text-decoration:none;border:1px solid var(--border);border-top:3px solid var(--ok-texto);border-radius:10px;padding:14px 16px;color:var(--ink-soft);font-size:14.5px}
+.fund a b{display:block;font-family:var(--titulo);font-size:15px;color:var(--ink);margin-bottom:4px}
+.fund a span{display:block;margin-top:8px;color:var(--ok-texto);font-weight:700;font-size:13px}
+.fund a:hover{border-color:var(--ok-texto)}
+
+/* mapa */
+.mapa{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:14px}
+.mapa a{display:block;text-decoration:none;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:8px;padding:10px;font-size:13px;line-height:1.3;color:var(--ink-soft);background:var(--papel)}
+.mapa a b{display:block;font-family:var(--titulo);font-size:20px;color:var(--accent)}
+.mapa a:hover{background:var(--accent-bg)}
+.ordem{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+
+/* ---- dia ---- */
+.dia{background:var(--papel);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:24px;margin-bottom:18px;scroll-margin-top:12px}
+.magica{font-family:var(--titulo);font-size:17px;font-weight:500;color:var(--ink);line-height:1.45}
+.dia-prep{background:var(--bg-warm);border-radius:10px;padding:14px 18px;margin:16px 0 14px;font-size:15px;color:var(--ink-soft)}
+.dia-prep p{margin:4px 0}
+.dia-prep ul{margin:4px 0 8px 20px}
+.dia-prep a{font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+
+/* ---- exercício ---- */
+.ex{border:1px solid var(--border);border-radius:10px;margin-top:10px;background:var(--papel);scroll-margin-top:12px}
+.ex:hover{border-color:var(--accent-line)}
+.ex[open]{border-color:var(--accent-line);box-shadow:0 0 0 3px var(--accent-bg)}
+.ex>summary{display:flex;gap:12px;align-items:center;cursor:pointer;list-style:none;padding:12px 14px}
+.ex>summary::-webkit-details-marker{display:none}
+.slide{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:50px;height:44px;border-radius:8px;background:var(--warm-bg);border:1px solid var(--warm-line);line-height:1.05}
+.slide small{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-dark)}
+.slide b{font-family:var(--titulo);font-size:17px;color:var(--accent-dark)}
+.num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.tit{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.tit>b{font-family:var(--titulo);font-weight:600;font-size:16px;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.meta i{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-left:4px}
+.tg{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--border-strong);border-radius:4px;color:var(--ink-soft)}
+.t-del{border-color:var(--ink);color:var(--ink)}
+.t-pen{background:var(--ink);color:#fff;border-color:var(--ink)}
+.t-fech{background:var(--warm-bg);color:var(--warm-dark);border-color:var(--warm)}
+.t-esq{border-style:dashed;border-color:var(--warm);color:var(--warm-dark)}
+.seta{flex:none;width:10px;height:10px;border-right:2px solid var(--ink-soft);border-bottom:2px solid var(--ink-soft);transform:rotate(45deg);margin:0 6px 4px 0;transition:transform .2s}
+.ex[open] .seta{transform:rotate(-135deg);margin-bottom:-4px}
+.corpo{padding:4px 16px 18px;border-top:1px solid var(--border)}
+.corpo p,.corpo li{font-size:15.5px}
+.corpo ul,.corpo ol{margin:6px 0 10px 20px}
+.corpo li{margin:4px 0}
+.corpo pre{white-space:pre-wrap;word-wrap:break-word;overflow-wrap:anywhere}
+.corpo blockquote{border-left:3px solid var(--accent-line);padding:6px 12px;margin:10px 0;color:var(--ink-soft);background:var(--accent-bg);border-radius:0 6px 6px 0}
+.corpo table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14.5px;display:block;overflow-x:auto}
+.corpo th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1.5px solid var(--ink);padding:6px 8px 6px 0}
+.corpo td{border-bottom:1px solid var(--border);padding:7px 8px 7px 0;vertical-align:top}
+.situacao{margin:14px 0 4px;color:var(--ink-soft)}
+.reuso{margin:10px 0;font-size:14.5px;color:var(--ink-soft)}
+.aviso-esq{margin:14px 0 4px;font-size:14px;color:var(--warm-dark);background:var(--warm-bg);border:1px dashed var(--warm);border-radius:8px;padding:8px 12px}
+
+/* o cartão, nas mesmas cores do slide */
+.cartao{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:14px}
+.parte{border-radius:10px;padding:14px 16px;min-width:0}
+.parte h4{display:flex;align-items:center;gap:10px;font-family:var(--titulo);font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.parte h4 span{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:0;color:#fff}
+.traga{background:var(--bg-warm)} .traga h4{color:var(--ink-soft)} .traga h4 span{background:var(--ink-soft)}
+.cole{background:var(--papel);border:1px solid var(--accent-line);border-left:4px solid var(--accent)} .cole h4{color:var(--accent-dark)} .cole h4 span{background:var(--accent)}
+.confira{background:var(--papel);border:1px solid var(--warm-line);border-top:3px solid var(--warm)} .confira h4{color:var(--warm-dark)} .confira h4 span{background:var(--warm-dark)}
+
+/* caixa de colar */
+.colar{position:relative;background:var(--accent-bg);border-radius:8px;margin:8px 0 12px}
+.colar pre{white-space:pre-wrap;word-wrap:break-word;font-family:var(--mono);font-size:13.5px;line-height:1.6;padding:14px 16px;padding-right:96px;color:var(--ink);overflow-x:auto}
+.colar pre code{background:none;padding:0;font-size:inherit;color:inherit}
+.colar.curto{margin:4px 0 0}
+.colar.curto pre{padding:10px 12px;padding-right:92px;font-size:13px}
+.copiar{position:absolute;top:8px;right:8px;font-family:var(--corpo);font-weight:700;font-size:12.5px;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:6px 12px;cursor:pointer}
+.copiar:hover{background:var(--accent-dark)}
+.copiar.ok{background:var(--ok-texto)}
+code.copia{cursor:pointer;border-bottom:1px dashed var(--accent)}
+code.copia::after{content:" ⧉";font-size:.85em;color:var(--accent)}
+code.copia.ok{background:var(--ok-bg)}
+.conserto{border-top:1px solid var(--warm-line);padding-top:10px;margin-top:12px}
+.c-quando{font-weight:700;color:var(--warm-dark);font-size:14.5px}
+
+/* material de exemplo */
+.material{border:1px dashed var(--border-strong);border-radius:10px;padding:14px 16px;margin-top:14px;background:#fcfbf8;min-width:0;overflow-wrap:anywhere}
+.rot{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.material .colar{background:var(--papel);border:1px solid var(--border)}
+.material h2{font-size:17px}
+.anexo{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-soft)}
+.anexo .botao{font-size:13.5px;padding:8px 14px}
+.sub-baixar{margin:22px 0 8px;font-size:14.5px;color:var(--ink-soft)}
+.bloco .botoes+.lista-mat{margin-top:16px}
+.dia h2{margin-bottom:6px}
+.item{display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 12px;padding:12px 0;border-top:1px solid var(--border);scroll-margin-top:16px}
+.item:target{background:var(--warm-bg)}
+.item .n{grid-row:span 2;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.item .t{font-weight:700;color:var(--ink)}
+.item .t small{font-family:var(--mono);font-weight:400;font-size:11.5px;color:var(--ink-soft);margin-left:10px}
+.item .ls{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14.5px}
+.item .ls a{color:var(--accent-dark);text-decoration:none;overflow-wrap:anywhere}
+.item .ls a:hover{text-decoration:underline}
+.item .ls small{font-family:var(--mono);color:var(--ink-soft);font-size:11.5px}
+.item .reuso{color:var(--ink-soft);margin:0;padding:0;border:0;background:none;font-size:14.5px}
+.item .reuso a{color:var(--accent-dark)}
+.exemplos{margin:14px 0;padding:12px 14px;border:1px solid var(--accent-line);border-radius:8px;background:var(--accent-bg)}
+.exemplos .rot{margin:0 0 6px}
+.exemplos nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.exemplos a{color:var(--accent-dark);font-size:14.5px;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.exemplos a:hover{text-decoration:underline}
+.exemplos small{font-family:var(--mono);font-weight:400;color:var(--ink-soft);font-size:11.5px}
+.prova{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px;margin-top:12px}
+.prova details{border:1px solid var(--border);border-radius:8px;padding:10px 14px;background:#fff;min-width:0}
+.prova summary{cursor:pointer;font-weight:700}
+.prova .resp{font-size:14px;overflow-wrap:anywhere}
+.prova .resp table{display:block;overflow-x:auto;font-size:13px}
+.lista-mat{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:6px 18px}
+.lista-mat a{color:var(--accent-dark);text-decoration:none;font-size:14.5px;padding:7px 0;border-bottom:1px solid var(--border);overflow-wrap:anywhere}
+.lista-mat a:hover{color:var(--ink)}
+.lista-mat small{font-family:var(--mono);color:var(--ink-soft);font-size:11.5px}
+.gabarito{margin-top:10px;border-top:1px solid var(--border);padding-top:10px}
+.gabarito summary{cursor:pointer;font-weight:700;color:var(--crit-texto);font-size:14.5px}
+.gabarito[open] summary{margin-bottom:8px}
+.gabarito h2{font-size:16px;margin-top:10px}
+
+/* cartão em branco e rodapé */
+.fim .colar pre{background:var(--papel)}
+footer{max-width:900px;margin:0 auto;padding:8px 16px 40px;font-size:13px;color:var(--ink-soft)}
+
+@media (max-width:720px){
+  .cartao-guia,.fund{grid-template-columns:1fr}
+  .mapa{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .bloco,.dia{padding:18px}
+  .ex>summary{gap:9px;padding:10px}
+  .slide{width:44px}
+  .corpo{padding:4px 12px 14px}
+  .colar pre{padding-right:16px;padding-top:44px}
+  .colar.curto pre{padding-right:12px;padding-top:42px}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <img src="ativos/rlima-logo-negativa.png" alt="R. Lima Treinamentos e Consultoria">
+    <span class="etq">Desafio · 7 dias · 25 exercícios</span>
+    <h1>Desafio Relatório, Planilha e Slides com IA em 7 Dias</h1>
+    <p class="sub">Os arquivos do desafio. Use junto com o PDF: é ele que explica cada exercício.</p>
+    <div class="regua"></div>
+  </div>
+</header>
+
+<main>
+<div class="miolo">
+
+  <section class="bloco">
+    <p class="olho">Para baixar</p>
+    <div class="botoes">
+      <a class="botao" href="arquivos/desafio-ia-todos-os-exercicios.md" download>Os 25 pedidos num arquivo só <small>.md</small></a>
+      <a class="botao claro" href="arquivos/pedidos/cartao-em-branco.md" download>O cartão em branco <small>.md</small></a>
+    </div>
+    <nav class="lista-mat" aria-label="Materiais de exemplo"><a href="arquivos/materiais/dia-1-relatorio-agosto.md" target="_blank" rel="noopener">Números de exemplo · exercício 1 <small>.md</small></a><a href="arquivos/materiais/dia-2-planilha-vendas.md" target="_blank" rel="noopener">Planilha de exemplo · dia 2 <small>.md</small></a><a href="arquivos/materiais/dia-3-numeros.md" target="_blank" rel="noopener">Números de exemplo · dia 3 <small>.md</small></a><a href="arquivos/materiais/dia-3-design-system.md" target="_blank" rel="noopener">Design system de exemplo · exercícios 11 e 13 <small>.md</small></a><a href="arquivos/materiais/dia-4-titulos.md" target="_blank" rel="noopener">Títulos de exemplo · exercício 12 <small>.md</small></a><a href="arquivos/materiais/dia-4-documento-longo.md" target="_blank" rel="noopener">Documento longo de exemplo · exercício 14 <small>.md</small></a><a href="arquivos/materiais/dia-4-proposta.md" target="_blank" rel="noopener">Proposta de exemplo · exercício 15 <small>.md</small></a><a href="arquivos/materiais/dia-5-anotacoes.md" target="_blank" rel="noopener">Anotações de exemplo · exercício 16 <small>.md</small></a><a href="arquivos/materiais/dia-5-reuniao.md" target="_blank" rel="noopener">Reunião de exemplo · exercício 17 <small>.md</small></a><a href="arquivos/materiais/dia-6-emails.md" target="_blank" rel="noopener">E-mails de exemplo · exercícios 20, 21 e 22 <small>.md</small></a></nav>
+  </section>
+
+  <section class="bloco dia" id="dia-1"><p class="olho">Dia 1</p><h2>O mesmo pedido, dois jeitos</h2><div class="item" id="ex-01"><span class="n">01</span><span class="t">O teste do raso<small>slide 12</small></span><span class="ls"><a href="arquivos/pedidos/ex-01.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-1-relatorio-agosto.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-02"><span class="n">02</span><span class="t">O defeito diz o que mexer<small>slide 14</small></span><span class="ls"><a href="arquivos/pedidos/ex-02.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div><div class="item" id="ex-03"><span class="n">03</span><span class="t">Delegar ou pensar junto, o mesmo material<small>slide 16</small></span><span class="ls"><a href="arquivos/pedidos/ex-03.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div></section><section class="bloco dia" id="dia-2"><p class="olho">Dia 2</p><h2>Planilha</h2><div class="item" id="ex-04"><span class="n">04</span><span class="t">Raio-X antes de perguntar<small>slide 19</small></span><span class="ls"><a href="arquivos/pedidos/ex-04.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-2-planilha-vendas.md" target="_blank" rel="noopener">o material <small>.md</small></a><a href="arquivos/dia-2-planilha-vendas.xlsx" target="_blank" rel="noopener">a planilha <small>.xlsx</small></a></span></div><div class="item" id="ex-05"><span class="n">05</span><span class="t">Arrumar antes de pedir<small>slide 21</small></span><span class="ls"><a href="arquivos/pedidos/ex-05.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><span class="reuso">material do <a href="#ex-04">04</a></span></span></div><div class="item" id="ex-06"><span class="n">06</span><span class="t">O número e de onde ele saiu<small>slide 23</small></span><span class="ls"><a href="arquivos/pedidos/ex-06.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><span class="reuso">material do <a href="#ex-04">04</a></span></span></div><div class="item" id="ex-07"><span class="n">07</span><span class="t">A planilha que você monta na mão<small>slide 25</small></span><span class="ls"><a href="arquivos/pedidos/ex-07.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div></section><section class="bloco dia" id="dia-3"><p class="olho">Dia 3</p><h2>Relatório com pesquisa</h2><div class="item" id="ex-08"><span class="n">08</span><span class="t">O que aconteceu × por que aconteceu<small>slide 28</small></span><span class="ls"><a href="arquivos/pedidos/ex-08.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-3-numeros.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-09"><span class="n">09</span><span class="t">Pesquisa com hipótese, em vez de mil abas<small>slide 30</small></span><span class="ls"><a href="arquivos/pedidos/ex-09.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><span class="reuso">material do <a href="#ex-08">08</a></span></span></div><div class="item" id="ex-10"><span class="n">10</span><span class="t">As fontes passam no teste?<small>slide 32</small></span><span class="ls"><a href="arquivos/pedidos/ex-10.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><span class="reuso">material do <a href="#ex-08">08</a></span></span></div><div class="item" id="ex-11"><span class="n">11</span><span class="t">Uma página para quem tem 5 minutos<small>slide 34</small></span><span class="ls"><a href="arquivos/pedidos/ex-11.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-3-design-system.md" target="_blank" rel="noopener">o material <small>.md</small></a><a href="arquivos/exemplos/ex11-relatorio-texto.md" target="_blank" rel="noopener">o relatório em texto, como voltou <small>md</small></a><a href="arquivos/exemplos/ex11-relatorio-sem-design.html" target="_blank" rel="noopener">em html, sem design system <small>html</small></a><a href="arquivos/exemplos/ex11-relatorio-com-design.html" target="_blank" rel="noopener">em html, com o design system <small>html</small></a></span></div></section><section class="bloco dia" id="dia-4"><p class="olho">Dia 4</p><h2>Apresentação e documento</h2><div class="item" id="ex-12"><span class="n">12</span><span class="t">Títulos que já dizem a conclusão<small>slide 37</small></span><span class="ls"><a href="arquivos/pedidos/ex-12.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-4-titulos.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-13"><span class="n">13</span><span class="t">Do relatório ao roteiro, com os dados da pesquisa<small>slide 39</small></span><span class="ls"><a href="arquivos/pedidos/ex-13.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><span class="reuso">material do <a href="#ex-11">11</a></span><a href="arquivos/exemplos/ex13-roteiro-texto.md" target="_blank" rel="noopener">o roteiro em texto, como voltou <small>md</small></a><a href="arquivos/exemplos/ex13-slides-sem-design.html" target="_blank" rel="noopener">slides em html, sem design system <small>html</small></a><a href="arquivos/exemplos/ex13-slides-com-design.html" target="_blank" rel="noopener">slides em html, com o design system <small>html</small></a></span></div><div class="item" id="ex-14"><span class="n">14</span><span class="t">O documento longo em uma página<small>slide 41</small></span><span class="ls"><a href="arquivos/pedidos/ex-14.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-4-documento-longo.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-15"><span class="n">15</span><span class="t">O que esta proposta assume?<small>slide 43</small></span><span class="ls"><a href="arquivos/pedidos/ex-15.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-4-proposta.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div></section><section class="bloco dia" id="dia-5"><p class="olho">Dia 5</p><h2>Reunião e ata</h2><div class="item" id="ex-16"><span class="n">16</span><span class="t">Da anotação bagunçada à ata<small>slide 46</small></span><span class="ls"><a href="arquivos/pedidos/ex-16.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-5-anotacoes.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-17"><span class="n">17</span><span class="t">A pauta que cabe no tempo<small>slide 48</small></span><span class="ls"><a href="arquivos/pedidos/ex-17.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-5-reuniao.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-18"><span class="n">18</span><span class="t">As perguntas difíceis<small>slide 50</small></span><span class="ls"><a href="arquivos/pedidos/ex-18.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div></section><section class="bloco dia" id="dia-6"><p class="olho">Dia 6</p><h2>E-mail e mensagem</h2><div class="item" id="ex-19"><span class="n">19</span><span class="t">O e-mail do dia seguinte<small>slide 53</small></span><span class="ls"><a href="arquivos/pedidos/ex-19.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><span class="reuso">material do <a href="#ex-16">16</a></span></span></div><div class="item" id="ex-20"><span class="n">20</span><span class="t">Revisar antes de enviar<small>slide 55</small></span><span class="ls"><a href="arquivos/pedidos/ex-20.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-6-emails.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-21"><span class="n">21</span><span class="t">Cobrar sem queimar a relação<small>slide 57</small></span><span class="ls"><a href="arquivos/pedidos/ex-21.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-6-emails.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div><div class="item" id="ex-22"><span class="n">22</span><span class="t">Responder quem chegou irritado<small>slide 59</small></span><span class="ls"><a href="arquivos/pedidos/ex-22.md" target="_blank" rel="noopener">o pedido <small>.md</small></a><a href="arquivos/materiais/dia-6-emails.md" target="_blank" rel="noopener">o material <small>.md</small></a></span></div></section><section class="bloco dia" id="dia-7"><p class="olho">Dia 7</p><h2>O seu pedido</h2><div class="item" id="ex-23"><span class="n">23</span><span class="t">A IA te entrevista primeiro<small>slide 62</small></span><span class="ls"><a href="arquivos/pedidos/ex-23.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div><div class="item" id="ex-24"><span class="n">24</span><span class="t">O cartão passa no teste?<small>slide 64</small></span><span class="ls"><a href="arquivos/pedidos/ex-24.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div><div class="item" id="ex-25"><span class="n">25</span><span class="t">O antes × depois do fim<small>slide 66</small></span><span class="ls"><a href="arquivos/pedidos/ex-25.md" target="_blank" rel="noopener">o pedido <small>.md</small></a></span></div></section>
+
+  <section class="bloco" id="prova">
+    <p class="olho">A prova dos slides 7 e 8</p>
+    <nav class="lista-mat">
+      <a href="arquivos/prova/conversa-a-documento.pdf" target="_blank" rel="noopener">Conversa A · o documento que voltou <small>.pdf</small></a>
+      <a href="arquivos/prova/conversa-a.md" target="_blank" rel="noopener">Conversa A · a resposta inteira <small>.md</small></a>
+      <a href="arquivos/prova/conversa-b.md" target="_blank" rel="noopener">Conversa B · a resposta inteira <small>.md</small></a>
+    </nav>
+  </section>
+
+</div>
+</main>
+
+<footer>Desafio Relatório, Planilha e Slides com IA em 7 Dias · Rafael Lima · R. Lima Treinamentos e Consultoria</footer>
+</body>
+</html>
