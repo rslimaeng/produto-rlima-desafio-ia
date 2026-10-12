@@ -125,7 +125,7 @@ Leia a resposta e ache o defeito na tabela. Cole **só a frase daquele defeito**
 - O defeito que você apontou sumiu.
 - O que já estava certo continua lá.
 
-**Se o defeito não sumiu,** o problema era outro: volte à tabela e escolha a linha seguinte. **Não peça "tenta de novo".** Cada rodada é um novo sorteio de palavras (slide 4): sempre aparece uma que agrada, até quando todas estão erradas.
+**Se o defeito não sumiu,** o problema era outro: volte à tabela e escolha a linha seguinte. **Não peça "tenta de novo".** Cada rodada é um novo sorteio de palavras (slide 6): sempre aparece uma que agrada, até quando todas estão erradas.
 
 **Se nenhuma linha resolve,** talvez o problema não seja o pedido:
 - a informação não existe escrita em lugar nenhum;
@@ -355,7 +355,7 @@ Está pronto quando eu consigo refazer cada número na planilha, sozinho, em um 
 - Suposição marcada como suposição.
 - **Refaça um número na mão,** na planilha. Se bateu, o resto ganha crédito. Se não bateu, pare aqui.
 
-**A IA também prevê número (slide 4): sem fazer a conta, escreve o valor provável. Antes de levar algum à reunião:** `Antes de eu usar esse número: você executou um cálculo sobre todas as linhas, ou estimou olhando uma parte? Diga quantas linhas entraram na conta e quais colunas você usou.`
+**A IA também prevê número (slide 6): sem fazer a conta, escreve o valor provável. Antes de levar algum à reunião:** `Antes de eu usar esse número: você executou um cálculo sobre todas as linhas, ou estimou olhando uma parte? Diga quantas linhas entraram na conta e quais colunas você usou.`
 
 
 ## Exercício 7 · A planilha que você monta na mão
@@ -510,7 +510,7 @@ Está pronto quando eu sei se a hipótese aguenta, e o que eu confiro antes de l
 
 **Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
-**Se a sua IA não busca na internet,** tudo vai sair `[DE MEMÓRIA]`, isto é, previsto do que ela leu, não consultado (slide 4). A etiqueta fez o trabalho dela: avisou.
+**Se a sua IA não busca na internet,** tudo vai sair `[DE MEMÓRIA]`, isto é, previsto do que ela leu, não consultado (slide 6). A etiqueta fez o trabalho dela: avisou.
 
 **Se faltou etiqueta:** `Esta afirmação não tem etiqueta: "[o trecho]". Etiquete todas, e o que não tiver fonte vira [PRECISA VERIFICAR].`
 
@@ -906,7 +906,7 @@ Está pronto quando quem não estava na reunião sabe o que foi decidido, o que 
 
 **Se apareceu pendência que não está nas anotações:** `A pendência "[qual]" não está nas minhas anotações. De onde ela saiu? Se não saiu de lá, retire.`
 
-**Se a IA preencheu um dono ou prazo que não estava lá (é o padrão do slide 4: o nome mais provável):** `Você pôs "[o que pôs]" em "[a pendência]", mas as anotações não dizem isso. Deixe vazio e marque [sem dono] ou [sem prazo].`
+**Se a IA preencheu um dono ou prazo que não estava lá (é o padrão do slide 6: o nome mais provável):** `Você pôs "[o que pôs]" em "[a pendência]", mas as anotações não dizem isso. Deixe vazio e marque [sem dono] ou [sem prazo].`
 
 
 ## Exercício 17 · A pauta que cabe no tempo
