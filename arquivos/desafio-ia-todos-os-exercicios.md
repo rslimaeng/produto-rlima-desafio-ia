@@ -125,7 +125,7 @@ Leia a resposta e ache o defeito na tabela. Cole **só a frase daquele defeito**
 - O defeito que você apontou sumiu.
 - O que já estava certo continua lá.
 
-**Se o defeito não sumiu,** o problema era outro: volte à tabela e escolha a linha seguinte. **Não peça "tenta de novo".** Cada rodada é um novo sorteio de palavras (slide 3): sempre aparece uma que agrada, até quando todas estão erradas.
+**Se o defeito não sumiu,** o problema era outro: volte à tabela e escolha a linha seguinte. **Não peça "tenta de novo".** Cada rodada é um novo sorteio de palavras (slide 4): sempre aparece uma que agrada, até quando todas estão erradas.
 
 **Se nenhuma linha resolve,** talvez o problema não seja o pedido:
 - a informação não existe escrita em lugar nenhum;
@@ -355,7 +355,7 @@ Está pronto quando eu consigo refazer cada número na planilha, sozinho, em um 
 - Suposição marcada como suposição.
 - **Refaça um número na mão,** na planilha. Se bateu, o resto ganha crédito. Se não bateu, pare aqui.
 
-**A IA também prevê número (slide 3): sem fazer a conta, escreve o valor provável. Antes de levar algum à reunião:** `Antes de eu usar esse número: você executou um cálculo sobre todas as linhas, ou estimou olhando uma parte? Diga quantas linhas entraram na conta e quais colunas você usou.`
+**A IA também prevê número (slide 4): sem fazer a conta, escreve o valor provável. Antes de levar algum à reunião:** `Antes de eu usar esse número: você executou um cálculo sobre todas as linhas, ou estimou olhando uma parte? Diga quantas linhas entraram na conta e quais colunas você usou.`
 
 
 ## Exercício 7 · A planilha que você monta na mão
@@ -456,6 +456,8 @@ Está pronto quando eu sei o que aconteceu, e qual hipótese testar primeiro. No
 - Onde verificar cada uma: dado interno, pessoa ou fonte de fora.
 - **Escolha uma hipótese de fora.** Ela vai para o exercício 9.
 
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
+
 **Se uma causa entrou como fato:** `Você pôs uma causa na parte do fato: "[o trecho]". Mova para as hipóteses, com a marca, e diga o que a derrubaria.`
 
 **Se as causas serviam para qualquer queda:** `Essas causas serviriam para qualquer queda. Refaça só com hipóteses que estes números sustentam, citando o número que aponta para cada uma.`
@@ -506,7 +508,9 @@ Está pronto quando eu sei se a hipótese aguenta, e o que eu confiro antes de l
 - **A evidência contra** apareceu, e não só a que confirma.
 - Nenhuma porcentagem sem fonte.
 
-**Se a sua IA não busca na internet,** tudo vai sair `[DE MEMÓRIA]`, isto é, previsto do que ela leu, não consultado (slide 3). A etiqueta fez o trabalho dela: avisou.
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
+
+**Se a sua IA não busca na internet,** tudo vai sair `[DE MEMÓRIA]`, isto é, previsto do que ela leu, não consultado (slide 4). A etiqueta fez o trabalho dela: avisou.
 
 **Se faltou etiqueta:** `Esta afirmação não tem etiqueta: "[o trecho]". Etiquete todas, e o que não tiver fonte vira [PRECISA VERIFICAR].`
 
@@ -556,6 +560,8 @@ Vou te fazer três perguntas sobre estas fontes, uma de cada vez. Responda olhan
 - O que falta, **sem detalhe inventado.**
 - Quem não foi ouvido, e onde procurar.
 - **Clique numa citação** (ou procure o trecho na fonte). Ele diz o que a resposta afirma? A citação mostra o trecho, mas não confere a conclusão.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se um trecho citado não está na fonte:** `Não encontrei este trecho na [fonte]: "[o trecho]". Mostre o trecho literal de onde saiu isso. Se não houver, retire a afirmação.`
 
@@ -626,6 +632,8 @@ Está pronto quando eu imprimo em PDF e sai uma página, com a decisão em desta
 - **Ponha ao lado do relatório que você entregou:** o tamanho é parecido? A decisão está tão clara quanto?
 - **No HTML, o texto e os números são os mesmos da versão em texto,** e o PDF sai em uma página.
 
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
+
 **Se a hipótese virou fato:** `A hipótese "[qual]" virou fato no relatório. Volte a marca de hipótese, como estava na pesquisa.`
 
 **Se passou de uma página:** `[Quem lê] tem 5 minutos. Corte para uma página e ponha a decisão pedida no topo.`
@@ -676,6 +684,8 @@ Está pronto quando, lendo só os títulos novos, alguém que não estava na sal
 - Os títulos de assunto apontados, um por um.
 - Cada título novo com **número, comparação ou consequência que está no conteúdo do slide.**
 - **O gabarito:** lendo os títulos novos, alguém chegaria à decisão que a plateia tomou?
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se apareceu número que não está no slide:** `O título do slide [N] traz um número que não está no conteúdo dele: [o número]. Use só número que está no slide, ou mostre a conta que fez.`
 
@@ -742,6 +752,8 @@ Está pronto quando eu imprimo em PDF e sai um slide por página, com os título
 - A fala do primeiro minuto **cabe em um minuto, lida em voz alta.** Cronometre.
 - **No PDF, um slide por página,** com os títulos do roteiro sem palavra trocada.
 
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
+
 **Se a ferramenta de slides mexeu no texto** (ela costuma reescrever título e cortar número): `Compare o texto destes slides com o roteiro que eu aprovei, abaixo. Liste todo título que mudou e todo número que sumiu ou mudou de valor. Depois devolva o texto dos slides com os títulos e os números do roteiro restaurados.`
 
 **Se apareceu número que não estava no relatório:** `Releia o roteiro frase por frase e compare com o relatório. Para cada frase com número, diga se ele está no relatório com o mesmo valor, se mudou ou se não está.`
@@ -783,6 +795,8 @@ Está pronto quando eu entro na reunião sabendo o que importa para mim e o que 
 - **Cada ponto com a página** de onde saiu. **Abra duas das páginas citadas** e confira.
 - Os prazos desta semana, com a data do documento.
 - O que o documento não diz, como pergunta. Melhor ainda se ela cruzou duas partes que não se encaixam.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se a página citada não diz aquilo:** `Na página [N] não encontrei: "[o trecho]". Mostre o trecho literal de onde saiu. Se não houver, retire o ponto.`
 
@@ -828,6 +842,8 @@ Está pronto quando eu tenho as perguntas que não teria feito sozinho. Que perg
 - O que falta, como "não informado": custo total, multa, prazo.
 - **3 perguntas que o seu critério não faria,** e nenhuma recomendação.
 - **Algo que contraria o que você pensava.** Se tudo concordou, desconfie: a IA tende a concordar com quem pergunta.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se veio uma recomendação:** `Não me dê a decisão. Me dê só o que falta entrar nela, com o trecho da proposta em cada ponto.`
 
@@ -876,6 +892,8 @@ Está pronto quando quem não estava na reunião sabe o que foi decidido, o que 
 </anotacoes>
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -884,9 +902,11 @@ Está pronto quando quem não estava na reunião sabe o que foi decidido, o que 
 - Data deduzida, dita como deduzida. Abreviação estranha, perguntada.
 - **Agora o gabarito:** ponha a ata da IA ao lado da real. Tem pendência numa que não está na outra? **Nenhuma pendência inventada.**
 
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
+
 **Se apareceu pendência que não está nas anotações:** `A pendência "[qual]" não está nas minhas anotações. De onde ela saiu? Se não saiu de lá, retire.`
 
-**Se a IA preencheu um dono ou prazo que não estava lá (é o padrão do slide 3: o nome mais provável):** `Você pôs "[o que pôs]" em "[a pendência]", mas as anotações não dizem isso. Deixe vazio e marque [sem dono] ou [sem prazo].`
+**Se a IA preencheu um dono ou prazo que não estava lá (é o padrão do slide 4: o nome mais provável):** `Você pôs "[o que pôs]" em "[a pendência]", mas as anotações não dizem isso. Deixe vazio e marque [sem dono] ou [sem prazo].`
 
 
 ## Exercício 17 · A pauta que cabe no tempo
@@ -922,6 +942,8 @@ Na dúvida: se os objetivos não cabem no tempo, diga qual tirar, em vez de aper
 Está pronto quando eu posso mandar a pauta hoje e cada pessoa sabe o que trazer.
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -929,6 +951,8 @@ Está pronto quando eu posso mandar a pauta hoje e cada pessoa sabe o que trazer
 - **O item da decisão não está por último.**
 - Cada item abre com **uma pergunta que pede resposta,** e não "Discussão sobre X".
 - O que cada pessoa traz, por papel. Se não cabia tudo, **a IA disse o que tirar.**
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se a soma não cabe:** `A soma dá [x] minutos, e a reunião tem [y]. Corte, e me diga o que saiu e por quê.`
 
@@ -968,6 +992,8 @@ Está pronto quando eu tenho as perguntas que não tinha previsto, e sei o que f
 </relatorio>
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -976,6 +1002,8 @@ Está pronto quando eu tenho as perguntas que não tinha previsto, e sei o que f
 - Onde o relatório não responde, **o que levar,** sem número inventado.
 - Uma pergunta para responder na abertura.
 - **Algo que contraria o que você pensava.** Se tudo concordou, desconfie: a IA tende a concordar com quem pergunta.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se as perguntas eram as óbvias:** `Essas eu já tinha previsto. Me dê 3 que um [papel] cético faria e que não estão aí.`
 
@@ -1020,6 +1048,8 @@ Está pronto quando cada pessoa sabe, lendo só o e-mail, o que ela faz e até q
 </ata>
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -1027,6 +1057,8 @@ Está pronto quando cada pessoa sabe, lendo só o e-mail, o que ela faz e até q
 - As decisões, e quem faz o quê até quando.
 - **Sem abertura formal,** como "Venho por meio deste".
 - **Pendência sem prazo continua sem prazo,** com o pedido para o dono informar.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se veio cerimônia:** `Tire a abertura e o fechamento de cortesia. Comece pela primeira decisão.`
 
@@ -1064,6 +1096,8 @@ Está pronto quando a pessoa consegue [a ação] lendo só o e-mail, sem me resp
 </email>
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -1071,6 +1105,8 @@ Está pronto quando a pessoa consegue [a ação] lendo só o e-mail, sem me resp
 - A lista do que mudou, com o porquê.
 - **O que falta, apontado como `[FALTA: …]`,** e não completado por ela: quantidade, prazo, número.
 - O sentido é o seu, e o jeito também.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se apareceu informação que você não deu:** `Você pôs "[o que pôs]", que eu não dei. Volte para [FALTA: o quê] e me deixe completar.`
 
@@ -1113,6 +1149,8 @@ Restrições: no máximo 10 linhas. Sem pedir desculpa por cobrar ("desculpe inc
 Está pronto quando [quem] sabe o que mandar, até quando e o que acontece se não mandar, e a relação continua de pé.
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -1120,6 +1158,8 @@ Está pronto quando [quem] sabe o que mandar, até quando e o que acontece se n�
 - **Sem pedido de desculpa por cobrar.**
 - A consequência dita **como fato:** o que acontece, e não o que você vai fazer.
 - Cordial no fechamento. E nenhum prazo extra que você não deu.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se veio pedindo desculpa:** `Tire o pedido de desculpa por cobrar. Cobrar o combinado não é incômodo.`
 
@@ -1162,6 +1202,8 @@ Está pronto quando a pessoa lê, sente que foi ouvida e sabe o próximo passo, 
 </reclamacao>
 ```
 
+**Antes de abrir o Confira:** escreva 2 sinais que a resposta precisa ter para servir. Depois compare com os de baixo.
+
 
 ### Confira
 **O que deve voltar:**
@@ -1169,6 +1211,8 @@ Está pronto quando a pessoa lê, sente que foi ouvida e sabe o próximo passo, 
 - Sem admitir culpa, sem acusar ninguém.
 - **O próximo passo com data,** e o caminho para o privado.
 - **Nada prometido além do que você pode.** Até 120 palavras.
+
+**Antes das frases prontas:** sinal falhou? Escreva você a frase de conserto. Depois compare com as de baixo.
 
 **Se prometeu o que você não pode:** `A resposta promete "[o quê]", e isso eu não posso cumprir. Tire, e ofereça só [o que pode].`
 
