@@ -1,64 +1,91 @@
-*Claude.ai · Claude Sonnet 5.5 (Médio) · conversa nova · 04/10/2026. Transcrito dos prints, sem retoque.*
+### Você
 
-**Primeira resposta:**
+```
+Sou analista comercial e todo mês preparo o relatório de vendas para o diretor comercial. Os números de agosto de 2026 estão abaixo, entre as etiquetas <numeros>. Neste mês, teve a campanha do Dia dos Pais, de 1 a 9 de agosto.
 
-Antes de montar a página, preciso confirmar um número. Conferi as somas e achei uma divergência.
+O que eu preciso: um relatório de uma página. No topo, os 3 números que mais mudaram em relação ao mês anterior ou à meta. Depois, o que precisa de decisão do diretor comercial. O resto em poucas linhas no fim.
 
-**O total da Rede em julho não fecha.**
+Restrições: use apenas os números abaixo. Não estime valor que estiver faltando. Não explique causa que não está nos números; se achar uma provável, escreva como hipótese.
 
-- A tabela de estados diz R$ 36.510.
-- Somando os estados de julho (13.900 + 12.950 + 9.300), dá **R$ 36.150**.
-- Somando os produtos de julho (14.200 + 9.400 + 7.150 + 5.400), também dá **R$ 36.150**.
+Na dúvida: se um número parecer errado, estiver faltando ou aparecer duas vezes, liste o que encontrou e me pergunte antes de usar.
 
-Duas somas independentes batem em 36.150, então suspeito que 36.510 seja um erro de digitação (dígitos trocados). Os totais de agosto (37.190) e da meta (37.500) fecham certinho nas duas tabelas.
+Está pronto quando o diretor comercial consegue decidir o que fazer lendo só esta página, sem abrir a planilha.
 
-Isso muda o título do relatório. A Rede em agosto contra julho seria **+2,9%** se o correto for 36.150, ou **+1,9%** se for 36.510. Contra a meta não muda: R$ 37.190 contra R$ 37.500, ou seja, 0,8% abaixo.
+<numeros>
+VENDAS POR ESTADO · JULHO × AGOSTO 2026
+Estado	Julho	Agosto	Meta de agosto
+Ceará	R$ 13.900	R$ 15.100	R$ 14.500
+Pernambuco	R$ 12.950	R$ 13.480	R$ 14.000
+Rio Grande do Norte	R$ 9.300	R$ 8.610	R$ 9.000
+Rede	R$ 36.510	R$ 37.190	R$ 37.500
 
-**Qual é o número correto de julho para a Rede?** Se você confirmar 36.150, sigo com ele. Se for outro, me diga qual.
+VENDAS DA REDE POR PRODUTO · JULHO × AGOSTO 2026
+Produto	Julho	Agosto
+Air fryer	R$ 14.200	R$ 17.980
+Cafeteira	R$ 9.400	R$ 8.550
+Liquidificador	R$ 7.150	R$ 6.890
+Ventilador	R$ 5.400	R$ 3.770
+</numeros>
+```
 
-Também registro o que os números não trazem, para o relatório não preencher esses vazios:
+### Claude
 
-- Não há meta por produto, então só consigo comparar produtos com julho, não com a meta.
-- Não há vendas por dia ou por período, então não dá para medir o efeito da campanha do Dia dos Pais (1 a 9 de agosto). Se eu citar o Dia dos Pais como causa da alta da air fryer, será como hipótese.
+Antes de montar a página, achei uma divergência. Como você pediu, ainda não usei o número.
 
-**O Rafael respondeu:** "Confirmo 36.150"
+**Rede em julho: o total de R$ 36.510 não bate com as partes**
 
----
+- Os três estados somam R$ 36.150 (13.900 + 12.950 + 9.300).
+- Os quatro produtos também somam R$ 36.150 (14.200 + 9.400 + 7.150 + 5.400).
+- A linha “Rede” de julho diz R$ 36.510, uma diferença de R$ 360. Parece dois dígitos trocados, mas isso é só palpite meu.
 
-# Relatório de vendas · Agosto de 2026
+Em agosto está tudo certo: estados e produtos somam R$ 37.190, igual à linha Rede, e a meta de R$ 37.500 também fecha.
 
-**Rede: R$ 37.190** (+2,9% sobre julho, R$ 36.150). **0,8% abaixo da meta** (R$ 37.500), faltaram R$ 310.
+Isso muda só uma coisa: o crescimento da Rede sobre julho. Com R$ 36.510 fica +R$ 680 (+1,9%), e com R$ 36.150 fica +R$ 1.040 (+2,9%). A distância da meta (−R$ 310, −0,8%) e os três números do topo não dependem disso.
+
+Qual valor uso para a Rede em julho: R$ 36.150 (o que estados e produtos somam), R$ 36.510 (como está na linha Rede), ou você confere na planilha original e me diz?
+
+Assim que você responder, monto a página.
+
+### Você
+
+```
+Confirmo $36.150, pode seguir.
+```
+
+### Claude
+
+Vou montar o relatório de uma página usando R$ 36.150 como total da Rede em julho, e abrir como documento.
+
+### Documento · Relatório de vendas — agosto de 2026
 
 ## Os 3 números que mais mudaram
 
-*(maiores variações em R$ contra julho)*
+A air fryer cresceu R$ 3.780 e foi o único produto a subir; ventilador e cafeteira juntos perderam R$ 2.480.
 
-1. **Air fryer: +R$ 3.780 (+26,6%).** Foi de R$ 14.200 para R$ 17.980 e passou a ser 48,3% das vendas da rede, contra 39,3% em julho.
-2. **Ventilador: −R$ 1.630 (−30,2%).** Foi de R$ 5.400 para R$ 3.770. É a maior queda da rede.
-3. **Ceará: +R$ 1.200 (+8,6%).** Foi para R$ 15.100 e ficou R$ 600 (4,1%) acima da meta. É o único estado que bateu a meta.
+| Produto | Julho | Agosto | Variação | Leitura |
+|---|---|---|---|---|
+| Air fryer | R$ 14.200 | R$ 17.980 | +R$ 3.780 (+26,6%) | Passou de 39,3% para 48,3% das vendas da Rede |
+| Ventilador | R$ 5.400 | R$ 3.770 | −R$ 1.630 (−30,2%) | Maior queda percentual; foi de 14,9% para 10,1% das vendas da Rede |
+| Cafeteira | R$ 9.400 | R$ 8.550 | −R$ 850 (−9,0%) | Segunda maior queda em reais, depois do ventilador |
+
+Critério: maior variação percentual sobre julho, considerando produtos e estados.
 
 ## O que precisa de decisão do diretor comercial
 
-**1. Ventilador: agir ou aceitar a queda?**
-A queda de 30,2% é a maior da rede. Os números não trazem a causa. *Hipótese:* sazonalidade, mas não há dados para confirmar. Falta estoque e preço por produto. Decisão: pedir essa checagem antes de definir ação (promoção, reposição) ou aceitar a queda.
+A Rede fechou R$ 310 abaixo da meta (−0,8%); o Ceará, R$ 600 acima da sua, evitou uma distância maior. Há três decisões em aberto.
 
-**2. Rio Grande do Norte: intervir?**
-É o único estado que caiu sobre julho (−R$ 690, −7,4%) e está R$ 390 (4,3%) abaixo da meta. Pernambuco cresceu 4,1%, mas também ficou abaixo da meta (R$ 520, ou 3,7%). A falta de R$ 310 da rede é a soma dessas duas faltas (R$ 910), menos o excedente do Ceará (R$ 600). Decisão: se RN e PE entram em plano de recuperação.
+1. **Ventilador e cafeteira: agir em setembro ou aceitar a queda?** Os três produtos que caíram (ventilador, cafeteira e liquidificador) perderam R$ 2.740, o equivalente a 72% do ganho da air fryer. Excluindo a air fryer, as vendas da Rede caíram 12,5% (R$ 21.950 → R$ 19.210). **Hipótese**, não confirmada pelos números: a campanha do Dia dos Pais (1 a 9/8) concentrou a demanda na air fryer.
+2. **Pernambuco e Rio Grande do Norte: qual das duas lacunas atacar primeiro?** Juntas somam R$ 910 contra a meta. PE ficou R$ 520 abaixo (−3,7%), mas subiu 4,1% sobre julho. O RN ficou R$ 390 abaixo (−4,3%) e é o único estado que caiu sobre julho (−R$ 690, −7,4%).
+3. **Repetir uma ação nos moldes do Dia dos Pais?** A air fryer subiu 26,6%, mas a Rede cresceu só 2,9% e fechou abaixo da meta. Os números trazem apenas totais mensais: faltam as vendas por dia (1 a 9/8 contra o resto do mês) e o custo da campanha para medir o retorno.
 
-**3. Air fryer: depender dela e repetir a campanha?**
-Quase metade da receita está em um produto. *Hipótese:* a campanha do Dia dos Pais (1 a 9 de agosto) puxou a alta. Não há venda por dia, então o efeito da campanha não pode ser medido. Decisão: pedir as vendas diárias de agosto antes de decidir se a campanha se repete e se o estoque de air fryer é reforçado.
+## O resto
 
-## Demais números
+- **Rede:** R$ 37.190, +R$ 1.040 (+2,9%) sobre julho (R$ 36.150) e −R$ 310 (−0,8%) sobre a meta de R$ 37.500.
+- **Ceará:** R$ 15.100, +8,6% sobre julho e +R$ 600 (+4,1%) sobre a meta; é o único estado acima da meta.
+- **Liquidificador:** R$ 6.890, −R$ 260 (−3,6%) sobre julho.
+- **Dado ajustado:** julho da Rede = R$ 36.150, soma dos estados e dos produtos; a linha "Rede" da planilha trazia R$ 36.510 (diferença de R$ 360).
+- **Sem dados para afirmar:** meta por produto (não dá para dizer se algum cumpriu a meta) e vendas por produto em cada estado (não dá para dizer o que puxou a queda do RN).
 
-| Estado | Agosto | vs. julho | vs. meta |
-|---|---|---|---|
-| Ceará | R$ 15.100 | +8,6% | +4,1% |
-| Pernambuco | R$ 13.480 | +4,1% | −3,7% |
-| Rio Grande do Norte | R$ 8.610 | −7,4% | −4,3% |
+### Claude
 
-- **Cafeteira:** R$ 8.550 (−9,0%, −R$ 850).
-- **Liquidificador:** R$ 6.890 (−3,6%, −R$ 260).
-- **Limites dos dados:** não há meta por produto (comparação só com julho) nem vendas por dia.
-- **Correção de dado:** o total da Rede em julho na planilha (R$ 36.510) não fecha. A soma por estado e por produto dá R$ 36.150, valor usado aqui e confirmado por você.
-
-Se quiser, transformo isso em documento para enviar ao diretor.
+Estrutura no ar; agora escrevendo os 3 números do topo.
